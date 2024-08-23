@@ -60,50 +60,41 @@ main {
     margin: 20px;
 }
 
-.home-image img {
-    max-width: 100%;
-    border-radius: 10px;
+.home-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#gameArea {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.home-images img {
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.image-large {
+    max-width: 100%;
+}
+
+.image-small {
+    max-width: 50%; /* Ajuste o tamanho conforme necessário */
+}
+
+#jokes {
     margin-top: 20px;
 }
 
-.card {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    perspective: 1000px;
-}
-
-.card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.card.flipped .card-inner {
-    transform: rotateY(180deg);
-}
-
-.card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border: 1px solid #ccc;
+.joke {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
-.card-front {
-    background-color: #ff6347; /* Tomato */
+.joke:hover {
+    transform: scale(1.05);
 }
-
 .card-back {
     background-color: #fff;
     transform: rotateY(180deg);
